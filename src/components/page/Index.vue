@@ -80,6 +80,8 @@ export default {
         this.getPackage();          //会话数包数
     },
     mounted(){
+        this.value1='666';
+        this.value2='777';
         var erd = elementResizeDetectorMaker();
         erd.listenTo(document.getElementsByClassName("wrap"), function (element) {
             var width = element.offsetWidth
