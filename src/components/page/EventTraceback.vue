@@ -490,7 +490,7 @@ export default {
         search(){
             this.$axios.get('/qqqqqqq').then(
                 (res)=>{
-                    this.items=rea.data.data;
+                    this.items=res.data.data;
                 }
             )
         },

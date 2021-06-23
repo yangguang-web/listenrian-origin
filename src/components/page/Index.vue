@@ -126,7 +126,7 @@ export default {
                 (res)=>{
                     this.value1=res.data.qqqqqqqqqq;   //网络会话数量
                     this.value2=res.data.qqqqqqqqqq;   //安全事件数量
-                    this.value3=rea.data.qqqqqqqqqq;   //违规事件数量
+                    this.value3=res.data.qqqqqqqqqq;   //违规事件数量
                     this.value4=res.data.qqqqqqqqqq;   //可用存储空间
                 }
             )
