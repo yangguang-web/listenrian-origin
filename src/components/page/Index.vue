@@ -30,6 +30,9 @@
             </div>
         </div>
         </div>
+        <!-- <div>
+            {{test}}
+        </div> -->
         <div class="row3">
             <!-- <div class="chart" id="c5"></div> -->
             <div class="chart" id="c6"></div>
@@ -59,6 +62,7 @@ export default {
     name:'index',
     data() {
       return {
+        test:'',
         value1:'9600',  //网络会话
         value2:'1204',  //安全事件
         value3:'720',   //违规事件
@@ -80,6 +84,7 @@ export default {
         // this.getPackage();          //会话数包数
     },
     mounted(){
+        this.getPoem();
         var erd = elementResizeDetectorMaker();
         erd.listenTo(document.getElementsByClassName("wrap"), function (element) {
             var width = element.offsetWidth
@@ -102,6 +107,13 @@ export default {
         this.showc6();  //会话数包数
     },
     methods: {
+        getPoem(){
+            this.$axios.get('http://poetry.apiopen.top/sentences')
+                .then((res)=>{
+                    this.test=res.data.result.name;
+                    console.log(res.data.result.from);
+                })
+        },
         // 调整完字段将函数里面的对应部分死数据换成新的数组名
         getSecure(){
             this.$axios.get('/qqqqqqqqqq').then(
