@@ -2,7 +2,7 @@
     <div class="wrap">
         <div class="bar">
         <div class="square">
-            <div class="i-title">网络会话数量</div>
+            <div class="i-title">网络会话次数</div>
             <div class="i-count">
             <i class="bi bi-chat-dots-fill"></i>
             <span>{{value1}}</span>
