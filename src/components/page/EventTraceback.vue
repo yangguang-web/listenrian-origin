@@ -230,6 +230,7 @@ export default {
         }
     },
     mounted(){
+        this.showc1();
         var erd = elementResizeDetectorMaker();
         erd.listenTo(document.getElementsByClassName("wrap"), function (element) {
             var width = element.offsetWidth
@@ -239,7 +240,6 @@ export default {
                 echarts.init(document.getElementById("c1")).resize();
             })
         });
-        this.showc1();
     },
     methods:{
         showc1(){
@@ -333,12 +333,7 @@ export default {
                                     offset: 0,
                                     color: '#fff' // 0% 处的颜色
                                 }, {
-                                    // offset: 0.9,
                                     offset: 0.86,
-                                    /*
-            0.86 = （文字 + 文字距下边线的距离）/（文字 + 文字距下边线的距离 + 下边线的宽度）
-                                    
-                                    */
                                     color: '#fff' // 0% 处的颜色
                                 }, {
                                     offset: 0.86,
