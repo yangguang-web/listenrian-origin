@@ -230,7 +230,6 @@ export default {
         }
     },
     mounted(){
-        this.showc1();
         var erd = elementResizeDetectorMaker();
         erd.listenTo(document.getElementsByClassName("wrap"), function (element) {
             var width = element.offsetWidth

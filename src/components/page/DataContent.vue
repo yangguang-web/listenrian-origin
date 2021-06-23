@@ -193,21 +193,21 @@ export default {
       }
     },
     created(){
-      this.getList();
-      this.getList2();
+      // this.getList();
+      // this.getList2();
     },
     methods:{
       //获取左边表格数据
       getList(){
         this.$axios.get('/test').then((res)=>{
-          this.tableData=res.data;
+          this.tableData=res.data.data;
             console.log(res.data);
         })
       },
       //获取右边表格数据
       getList2(){
         this.$axios.get('/test').then((res)=>{
-          this.tableData2=res.data;
+          this.tableData2=res.data.data;
             console.log(res.data);
         })
       },
@@ -218,7 +218,7 @@ export default {
             qqqq:this.input
           }
         }).then((res)=>{
-          this.tableData=res.data;
+          this.tableData=res.data.data;
         })
       },
       //左边图表根据输入值搜索
@@ -228,7 +228,7 @@ export default {
             qqqq:this.input2
           }
         }).then((res)=>{
-          this.tableData2=res.data;
+          this.tableData2=res.data.data;
         })
       },
       submit(){
