@@ -71,17 +71,15 @@ export default {
       }
     },
     created(){
-        this.getFromIP();           //来源IP
-        this.getInterFromIP();      //来源IP（内网）TOP10
-        this.getToIP();             //目的IP
-        this.getInterToIp();        //目的IP（内网）TOP10
-        this.getCount();            //四个数量
-        this.getSecure();           //安全趋势
-        this.getPackage();          //会话数包数
+        // this.getFromIP();           //来源IP
+        // this.getInterFromIP();      //来源IP（内网）TOP10
+        // this.getToIP();             //目的IP
+        // this.getInterToIp();        //目的IP（内网）TOP10
+        // this.getCount();            //四个数量
+        // this.getSecure();           //安全趋势
+        // this.getPackage();          //会话数包数
     },
     mounted(){
-        this.value1='666';
-        this.value2='777';
         var erd = elementResizeDetectorMaker();
         erd.listenTo(document.getElementsByClassName("wrap"), function (element) {
             var width = element.offsetWidth

@@ -708,9 +708,9 @@ export default {
 
 </style>
 <style scoped>
-.detail-table{
+/* .detail-table{
 
-}
+} */
 .wrap{
     width: 100%;
     margin: auto;
