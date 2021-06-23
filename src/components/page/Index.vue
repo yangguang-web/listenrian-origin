@@ -110,10 +110,12 @@ export default {
         getPoem(){
             console.log('------------打印结果------------');
             
-            this.$axios.get('http://poetry.apiopen.top/sentences')
+            // this.$axios.get('http://poetry.apiopen.top/sentences')
+            // https://api.apiopen.top/recommendPoetry
+            this.$axios.get('https://api.apiopen.top/recommendPoetry')
                 .then((res)=>{
-                    this.test=res.data.result.name;
-                    console.log(res.data.result.from);
+                    this.test=res.data.message;
+                    console.log(res.data.message);
                 })
         },
         // 调整完字段将函数里面的对应部分死数据换成新的数组名
