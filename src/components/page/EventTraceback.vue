@@ -230,12 +230,16 @@ export default {
         }
     },
     mounted(){
+        console.log('666');
+        
         var erd = elementResizeDetectorMaker();
         erd.listenTo(document.getElementsByClassName("wrap"), function (element) {
             var width = element.offsetWidth
             var height = element.offsetHeight
             Vue.nextTick(function () {
                 console.log("Size: " + width + "x" + height)
+                var cc=document.getElementById("c1");
+                echarts.init(cc).resize();
                 // echarts.init(document.getElementById("c1")).resize();
             })
         });
