@@ -1,11 +1,11 @@
 <template>
     <el-card class="wrap">
         <!-- 图表 -->
-        <!-- <div class="row">
+        <div class="row">
             <div id="c1">
 
             </div>
-        </div> -->
+        </div>
         <!-- 搜索条件 -->
         <div class="condition">
             <el-input v-model="ip" placeholder="请输入IP地址" 
@@ -231,16 +231,13 @@ export default {
     },
     mounted(){
         console.log('666');
-        
         var erd = elementResizeDetectorMaker();
         erd.listenTo(document.getElementsByClassName("wrap"), function (element) {
             var width = element.offsetWidth
             var height = element.offsetHeight
             Vue.nextTick(function () {
                 console.log("Size: " + width + "x" + height)
-                var cc=document.getElementById("c1");
-                echarts.init(cc).resize();
-                // echarts.init(document.getElementById("c1")).resize();
+                echarts.init(document.getElementById("c1")).resize();
             })
         });
         this.showc1();
