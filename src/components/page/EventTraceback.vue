@@ -236,7 +236,7 @@ export default {
             var height = element.offsetHeight
             Vue.nextTick(function () {
                 console.log("Size: " + width + "x" + height)
-                echarts.init(document.getElementById("c1")).resize();
+                // echarts.init(document.getElementById("c1")).resize();
             })
         });
         this.showc1();
