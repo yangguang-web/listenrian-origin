@@ -239,6 +239,7 @@ export default {
                 echarts.init(document.getElementById("c1")).resize();
             })
         });
+        this.showc1();
     },
     methods:{
         showc1(){
