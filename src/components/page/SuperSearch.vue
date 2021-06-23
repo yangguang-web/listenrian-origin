@@ -331,7 +331,7 @@ export default {
     }
   },
   created(){
-    this.getPoem();
+    // this.getPoem();
   },
   mounted(){
       var erd = elementResizeDetectorMaker();
