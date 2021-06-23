@@ -108,6 +108,8 @@ export default {
     },
     methods: {
         getPoem(){
+            console.log('------------打印结果------------');
+            
             this.$axios.get('http://poetry.apiopen.top/sentences')
                 .then((res)=>{
                     this.test=res.data.result.name;
